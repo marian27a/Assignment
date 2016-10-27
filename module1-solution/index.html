@@ -7,9 +7,11 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
-<body>
-   <div class="container">
+<body ng-app="LunchCheck">
+   <div class="container" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
 
          <div class="form-group">
@@ -24,6 +26,9 @@
            <!-- Your message can go here. -->
          </div>
    </div>
-
+  
+  <script>
+    
+  </script>
 </body>
 </html>
