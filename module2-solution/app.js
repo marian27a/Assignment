@@ -9,7 +9,12 @@ angular.module('ShoppingListCheckOff', [])
 
 
 ToBuyController.$inject = ['ShoppingListService'];
+function ToBuyController(ShoppingListCheckOffService) {
+  var needBuy = this;
 
+  showList.items = ShoppingListService.getItems();
+
+}
 
 
 
@@ -31,8 +36,10 @@ AlreadyBoughtController.$inject = ['ShoppingListService'];
 
 function ShoppingListService() {
   var service = this;
-  var items = [];
-
+  var items = [{ name: "cookies", quantity: 10 }, { name: "Milk", quantity: '10 bottles'}, { name: "Sugar", quantity: '3'},{ name: "ice cream", quantity: 5},{ name: "Banana", quantity: 6}];
+  service.getItems = function () {
+    return items;
+  };
 }
 
 
