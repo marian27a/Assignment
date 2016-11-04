@@ -31,9 +31,10 @@
   <div class="row">
 
     <!-- To Buy List -->
-    <div class="col-md-6">
+    <div class="col-md-6" ng-controller='ToBuyController as needBuy'>
      <h2>To Buy:</h2>
      <ul>
+       <li ng-repeat="item in showList.items">{{ item.quantity }} of {{ item.name }}</li>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
        <li>Buy 10 cookies <button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
