@@ -31,15 +31,14 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 
 function ShoppingListCheckOffService() {
   var service = this;
- 
   var items = [{ name: "cookies", quantity: 10 }, { name: "Milk", quantity: '10 bottles'}, { name: "Sugar", quantity: '3'},{ name: "ice cream", quantity: 5},{ name: "Banana", quantity: 6}];
   var boughtitems = [];
 
   service.removeItem = function (itemIdex) {
-    boughtitems.push(items[itemIdex]);
-    items.splice(itemIdex, 1);
+    boughtitems.push(items.splice(itemIdex, 1));
   };
 
+  
   service.getItems = function () {
     return items;
   };
