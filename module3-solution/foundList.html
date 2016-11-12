@@ -1,0 +1,7 @@
+<div class="error" ng-if="narrow.nothingFound()" style="color: red;">Nothing found</div>
+<ul>
+<li ng-repeat="item in narrow.foundItems" style="clear: left; margin: 10px;">
+    {{$index + 1}}. {{item.name}}, {{item.short_name}}, {{item.description}}
+      <button class="btn btn-primary" ng-click="narrow.onRemove($index)">Don't want this one!</button>
+</li>
+</ul>
