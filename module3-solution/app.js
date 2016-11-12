@@ -11,8 +11,7 @@ angular.module('NarrowItDownApp',[])
         function NarrowItDownController(MenuSearchService)
         {
             var menu = this;
-            var  menu_items = [];    
-           // var foundItems = [];           
+            var  menu_items = [];               
              
             menu.searchItems = function () {           
            menu_items =  MenuSearchService.getMatchedMenuItems(menu.search);
